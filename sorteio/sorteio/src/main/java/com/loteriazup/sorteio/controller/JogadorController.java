@@ -1,4 +1,4 @@
-package controller;
+package com.loteriazup.sorteio.controller;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import model.JogadorModel;
-import repository.JogadorRepository;
+
+import com.loteriazup.sorteio.model.JogadorModel;
+import com.loteriazup.sorteio.repository.JogadorRepository;
 
 
 @RestController
@@ -33,7 +34,7 @@ public class JogadorController {
 		
 		@GetMapping("/jogadoremail/{email}")
 		public ResponseEntity<List<JogadorModel>>GetByEmail(@PathVariable String email){
-			return ResponseEntity.ok(repository.findAllByEmailContainingIgnoreCase(email)); //ver isso  
+			return ResponseEntity.ok(repository.findAllByEmailContainingIgnoreCase(email)); 
 		}
 
 		@PostMapping

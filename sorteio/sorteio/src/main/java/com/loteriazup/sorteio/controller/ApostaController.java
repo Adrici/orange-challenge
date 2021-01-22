@@ -1,4 +1,4 @@
-package controller;
+package com.loteriazup.sorteio.controller;
 
 import java.util.List;
 
@@ -13,11 +13,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import model.ApostaModel;
-import repository.ApostaRepository;
+
+import com.loteriazup.sorteio.model.ApostaModel;
+import com.loteriazup.sorteio.repository.ApostaRepository;
 
 @RestController
-@RequestMapping("/aposta")
+@RequestMapping("/apostas")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ApostaController {
 	
@@ -38,8 +39,8 @@ public class ApostaController {
 	
 
 	@PostMapping
-	public ResponseEntity<ApostaModel> post (@RequestBody ApostaModel aposta){
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(aposta));
+	public ResponseEntity<ApostaModel> post (@RequestBody ApostaModel apostas) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(apostas));
 	}
 	
 	 

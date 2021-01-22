@@ -1,9 +1,10 @@
-package repository;
+package com.loteriazup.sorteio.repository;
 
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import model.JogadorModel;
+
+import com.loteriazup.sorteio.model.JogadorModel;
 
 @Repository
 public interface JogadorRepository extends JpaRepository<JogadorModel, Long>{

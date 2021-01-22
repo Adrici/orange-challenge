@@ -1,8 +1,8 @@
-package service;
+package com.loteriazup.sorteio.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import repository.JogadorRepository;
+import com.loteriazup.sorteio.repository.JogadorRepository;
 
 public class JogadorService {
 	

@@ -1,4 +1,4 @@
-package model;
+package com.loteriazup.sorteio.model;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table (name = "jagador")
-public class JogadorModel {
+@Table (name = "jogador") 
+public class JogadorModel {    
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
